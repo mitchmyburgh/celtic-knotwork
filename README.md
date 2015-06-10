@@ -6,9 +6,7 @@ To run the software you need the Kivy Python library. Download it at: http://kiv
 
 
 Clone this repository, navigate to it in the terminal and run:
-
 	```$kivy knotwork.py```
-
 To run the main interface. To run the unit tests run:
 
 	```$kivy tests.py```
