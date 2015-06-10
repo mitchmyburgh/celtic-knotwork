@@ -1,0 +1,574 @@
+% THIS IS SIGPROC-SP.TEX - VERSION 3.1
+% WORKS WITH V3.2SP OF ACM_PROC_ARTICLE-SP.CLS
+% APRIL 2009
+%
+% It is an example file showing how to use the 'acm_proc_article-sp.cls' V3.2SP
+% LaTeX2e document class file for Conference Proceedings submissions.
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V3.2SP) *DOES NOT* produce:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) Page numbering
+% ---------------------------------------------------------------------------------------------------------------
+% It is an example which *does* use the .bib file (from which the .bbl file
+% is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission,
+% you need to 'insert'  your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% Questions regarding SIGS should be sent to
+% Adrienne Griscti ---> griscti@acm.org
+%
+% Questions/suggestions regarding the guidelines, .tex and .cls files, etc. to
+% Gerald Murray ---> murray@hq.acm.org
+%
+% For tracking purposes - this is V3.1SP - APRIL 2009
+
+\documentclass{acm_proc_article-sp}
+
+
+\begin{document}
+
+\title{3D Printing of Computer Generated Celtic Knotwork Patterns}
+\subtitle{CSC2005Z: Research Project}
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{2} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+Mitch Myburgh\\
+       \affaddr{UCT}\\
+       \affaddr{Rondebosch}\\
+       \affaddr{Cape Town, South Africa}\\
+       \email{mybmit001@myuct.ac.za}
+}
+% There's nothing stopping you putting the seventh, eighth, etc.
+% author on the opening page (as the 'third row') but we ask,
+% for aesthetic reasons that you place these 'additional authors'
+% in the \additional authors block, viz.
+
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
+
+\maketitle
+\begin{abstract}
+	Celtic Knotwork is an ancient art form created by monks for illustrating illuminated manuscripts, it is made up of patterns of overlapping bands, to produce pleasing designs. This report looks at the algorithmic construction of Celtic Knotwork and the creation of a user friendly interface for creating basic Celtic Knotwork, the user interface must find a balance between usability and complex customisability of the knot. The report also investigates the creation of customised 3D models of the knotwork suitable for 3D printing.\footnotemark[0]
+\end{abstract}
+\footnotetext{the full code is available at: \url{https://github.com/mitchmyburgh/celtic-knotwork}}
+% A category with the (minimum) three required fields
+\category{H.5.2}{User Interfaces}{Graphical user interfaces (GUI)}
+%A category including the fourth, optional field follows...
+\category{I.3.3}{Picture/Image Generation}{Display algorithms}
+
+\terms{Design}
+
+\keywords{Celtic Knotwork, 3D Modelling} % NOT required for Proceedings
+
+
+%*********************************************************************************************************
+\section{Introduction}
+%*********************************************************************************************************
+
+Celtic knotwork's characteristic overlapping pattern of knot bands is a style of artwork that can be produced algorithmically. The Knotwork commonly adorns Manuscripts and can be found carved into stonework. This project focuses on the basic Celtic knotwork designs, made using a grid of squares, however by modifying this algorithm one can produce a variety of knots in almost any shape and design. \\This project aims to produce 3D models from algorithmically produced Celtic Knots, that are suitable for printing with a 3D printer. A second goal is to build an intuitive user interface for constructing Celtic Knotwork, and a streamlined export of a file ready for 3D Printing. The software is built in Python and the Kivy display library for speed or programming and ease of use.
+
+
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.2]{basicKnot.png}
+    \caption{A basic knotwork pattern}
+    \label{fig:knot1}
+  \end{center}
+\end{figure}
+
+%*********************************************************************************************************
+\subsection{Problem Statement}
+%*********************************************************************************************************
+The current implementations of Celtic Knotwork are designed as an extension for quickly demonstrating the algorithm rather than focusing on the user experience (Figure~\ref{fig:glassnerProg} shows the interface made by Andrew Glassner \cite{Glassner1} for producing Celtic Knotwork). The software produced for this report will be evaluated using Heuristic evaluation to determine its usability.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.2]{fig/GlassnerProg.png}
+    \caption{The interface created by Glassner}
+    \label{fig:glassnerProg}
+  \end{center}
+\end{figure}
+
+3D output has been achieved before by Glassner \cite{Glassner3} (Figure~\ref{fig:glassner3D}) and Kaplan and Cohen \cite{KC2003} (Figure ~\ref{fig:KC3D}). The software created in this report is also able to output a 3D model of Knotwork as an STL file suitable for 3D printing.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.2]{fig/Glassner3D.png}
+    \caption{The 3D knotwork produced by Glassner}
+    \label{fig:glassner3D}
+  \end{center}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.2]{fig/KC3D.png}
+    \caption{The 3D knotwork produced by Kaplan and Cohen, which has been 3D printed}
+    \label{fig:KC3D}
+  \end{center}
+\end{figure}
+
+%*********************************************************************************************************
+\subsection{Motivation}
+%*********************************************************************************************************
+Celtic knotwork is easily produced algorithmically but current implementations don't provide a very user friendly interface for producing the knotwork, so this report aims to produce a more user friendly interface and attempt to balance usability with customisability. The 3D output, while it has been done before, presents a challenge to produce the knotwork as a 3D model.
+
+
+%*********************************************************************************************************
+\subsection{Research Objectives}
+%*********************************************************************************************************
+
+\textbf{Produce a 3D printable Celtic Knotwork Model}
+
+\begin{itemize}
+	
+		\item The resulting knotwork should be a simple 3D model of the knotwork which is suitable for use in other applications or printing directly.
+	\item This will be tested by running the resulting 3D knotwork through a program to test for manifold errors (gaps in the model and surfaces that don't connect).
+\end{itemize}
+
+\textbf{Produce an improved, user-friendly, interactive interface for designing knotwork patterns}
+\begin{itemize}
+	\item The interface in most Celtic knotwork applications is utilitarian as the applications are mainly focused on the knotwork algorithm. A focus on the interface should make it easier for users to learn how to make Celtic Knotwork, and making the user interface interactive will improve usability.
+	\item This can be tested through user testing of the interface. A Heuristic evaluation will be completed to test the interface, it will involve asking the users to complete a variety of tasks and answer questions based on their experience.
+\end{itemize}
+
+
+%*********************************************************************************************************
+\section{Literature Review}
+%*********************************************************************************************************
+
+Celtic knotwork is a style of art characterised by interlacing knot patterns, often seen in illuminated manuscripts and in stone carvings. The technique was initially thought lost until it was rediscovered in 1951 by George Bain \cite{GBain1951}, when he published a book detailing the creation of the knotwork. Bain's work was later improved upon by his son Iain Bain \cite{IBain1951}, by simplifying his father's method and presenting the 3 Grid system that would be the basis for the algorithm used by Andrew Glassner  \cite{Glassner1, Glassner2, Glassner3}, when he produced the algorithm that the software in this report will be following. Glassner bases his knotwork on grids \cite{Glassner1} and more complex tessellating shapes \cite{Glassner2}. Kaplan and Cohen \cite{KC2003} expand on these ideas with an algorithm for creating more complex knotwork, by weaving it over any shape or 3D mesh, and also by introducing images into the knots. Drewes and Klempien-Hinrichs \cite{DK2000} describe a more detailed algorithm using a collage grammar, which uses tree evaluation and predefined images to produce the knots. Douglas Dunham \cite{bridges2000:13} uses Glassner's algorithm to produce Celtic Knotwork that is combined with hyperbolic geometry, complementing Celtic knotwork on the plane and sphere. This illustrates the flexibility of the algorithm. 3D knotwork is formulated by Glassner \cite{Glassner3} as weaving the knotwork on a deconstructed shape and then reconconstructing it to form a 3D object, as well as producing 3D weaves by raising the knotwork at the overlaps. Kaplan and Cohen \cite{KC2003} also touch on 3D knotwork by using their algorithm to produce 3D printed knots, but their approach is able to weave the pattern over an arbitrary mesh, allowing more variation in the designs.
+
+%*********************************************************************************************************
+\section{Implementation}
+%*********************************************************************************************************
+
+The software to algorithmically produce the Celtic Knotwork was built based on the work of Andrew Glassner \cite{Glassner1}\cite{Glassner2}\cite{Glassner3}, and his basic algorithm. This software is then able to take the Knotwork pattern produced by the user and create a 3D model of it suitable for input to meshing software that provides a set union of shapes and produces a printable STL file. This system will be provided by Professor Gain. This software performs error checks to ensure that the file can be 3D printed properly, without manifold errors, but the output will be tested in other programs first. The user interface of the program was built to be as user-friendly and intuitive as possible, using appropriate HCI heuristics, and a series of user tests will be performed to test this.
+\\ \\
+The software was built using Python and the Kivy interface library.
+%*********************************************************************************************************
+\subsection{Major Software Artifacts}
+%*********************************************************************************************************
+The Major software artifacts that will be produced will be a software implementation divided into two parts:
+\begin{enumerate} 
+  \item The first to algorithmically produce a Celtic Knotwork pattern: \textbf{Key Features:} The ability to produce the knotwork pattern based on user specifications for the size, breaklines and knot width.
+  \item The second part of the software will be to convert this knotwork pattern into a 3D model which can be printed on a 3D printer: \textbf{Key Features:} The ability to convert the 2D pattern into a 3D model suitable for printing; \textbf{Major design challenges:} Producing over-under weaving without manifold errors.
+\end{enumerate}
+
+
+%*********************************************************************************************************
+\subsection{Algorithm}\label{Algorithm}
+%*********************************************************************************************************
+The algorithm for this implementation of Celtic Knotwork is based on the algorithm put forth by Glassner \cite{Glassner1} which in turn is based on the original algorithm by George Bain \cite{GBain1951} and the improvements made by his son Iain Bain \cite{IBain1951}, the algorithm is based on a grid of squares, with each cell containing a single piece of the knot.
+
+
+%*********************************************************************************************************
+\subsubsection{Drawing the Grid}
+%*********************************************************************************************************
+An $x$ by $y$ primary grid is specified with $\{x, y \geq 1 | x, y \in \mathbb{Z}\}$. From this primary grid a secondary grid is defined by splitting each cell into 4 squares resulting in a $2x$ by $2y$ grid.
+
+%*********************************************************************************************************
+\subsubsection{Breaklines}
+%*********************************************************************************************************
+Breaklines are the main method of producing knotwork patterns, these are lines which the knotwork cannot cross. Each cell in the secondary grid can have a maximum of 2 breaklines and the breaklines drawn along the primary grid lines cannot cross those drawn on the secondary grid lines. It is necessary to bound the outside of the grid in breaklines in order to properly define the knot. For the purpose of the software breaklines are numbered from 1 to 4 starting at the top and moving clockwise around the cell.\\ \\ Breaklines can appear in the following positions:
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.6]{breaklines.png}
+    \caption{The possible positions of the breaklines in each secondary cell. \textbf{a)} 1, \textbf{b)} 2 ,\textbf{c)} 3, \textbf{d)} 4, \textbf{e)} 1 and 2, \textbf{f)} 2 and 3, \textbf{g)} 3 and 4, \textbf{h)} 4 and 1, \textbf{i)} 1 and 3, \textbf{j)} 2 and 4}
+    \label{fig:breaklines}
+  \end{center}
+\end{figure}
+
+%*********************************************************************************************************
+\subsubsection{Drawing the Skeleton}
+%*********************************************************************************************************
+The skeleton is the rough representation of the knotwork and is made by drawing  straight lines in each cell joining algorithmically determined points. For ease of explanation the points in Figure~\ref{fig:gridPoints} around each secondary cell are used throughout.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.6]{gridPoints.png}
+    \caption{The grid points used to describe connecting lines in the skeleton}
+    \label{fig:gridPoints}
+  \end{center}
+\end{figure}
+
+The knot is made by an alternating pattern starting in the top left corner. For odd rows start with a line sloping to the right in the first cell, for even rows start with a line sloping to the left; then for each cell swap the direction of the line so that odd cells have a line sloping the same direction as the first cell. Because the secondary grid always has an even number of cells in each row you will always end the row (and column) with a line sloping the opposite direction to the line in the first cell. In the interior of the knot the lines connect opposite corners (1 and 2 or 3 and 7), breaklines affect the positioning of the knot lines, as displayed in figure~\ref{fig:breaklines+lines}
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.6]{breaklines+lines.png}
+    \caption{Diagram showing the affect of breaklines on the knot lines. \textbf{i)} and \textbf{l)} are the lines found in the interior of the knot; e), f), g) and h) are the knot lines in the corners; a), b), c) and d) show the knot lines on the borders and should be flipped in an alternating pattern (i.e. for a) the line can either join 5 and 2 or 3 and 6); j) and k) are special cases.}
+    \label{fig:breaklines+lines}
+  \end{center}
+\end{figure}
+
+Figure~\ref{fig:CelticKnotworkskel} shows a complete knotwork skeleton, as well as the breaklines (in white) and grid lines (in yellow and cyan).
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.55]{CelticKnotworkskel.png}
+    \caption{Image of the Celtic knotwork skeleton with breaklines in white, taken from the software.}
+    \label{fig:CelticKnotworkskel}
+  \end{center}
+\end{figure}
+
+
+%*********************************************************************************************************
+\subsubsection{Drawing the Knot}
+%*********************************************************************************************************
+
+The final knot is based on the skeleton, but adds some features such as corners and curves. There are two types of corners available in the software: a right angle corner, which joins the midpoints of the sides with the middle of the cell (Figure~\ref{fig:rightCorners}); and a curved corner which is a quadratic Bézier curve (Figure ~\ref{fig:curveCorners}). 
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.55]{rightCorners.png}
+    \caption{A 2x1 knot with right angled corners}
+    \label{fig:rightCorners}
+  \end{center}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.55]{curveCorners.png}
+    \caption{A 2x1 knot with curved corners}
+    \label{fig:curveCorners}
+  \end{center}
+\end{figure}
+
+The curves on the edges can be seen in figure~\ref{fig:finalKnot} and are quadratic bezier curves, which appear when the cell is bordered by a breakline.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.55]{fig/finalKnot.png}
+    \caption{A 4x4 knot showing the curves and corners}
+    \label{fig:finalKnot}
+  \end{center}
+\end{figure}
+
+%*********************************************************************************************************
+\subsection{Interface}
+%*********************************************************************************************************
+
+The knotwork interface is made using Python and the Kivy interface library, Kivy is designed for use with Android so its interface looks non-native although it is still visually pleasing, and with the implementation of native keyboard shortcuts this issue is minimised.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.3]{fig/interface.png}
+    \caption{The main program interface}
+    \label{fig:interface}
+  \end{center}
+\end{figure}
+
+
+%*********************************************************************************************************
+\subsubsection{Knotwork Interface}
+%*********************************************************************************************************
+The knotwork interface is a tabbed interface allowing the user to work on multiple knots at the same time. Each tab contains a main view, which prominently displays the knotwork with options and buttons down the left and right sides. The interface is shown in Figure~\ref{fig:interface}.\\ \\ Down the right side are the main settings for generating the knot including setting its the size of the knot, the size of the grid cells, the width and the corner type. The option to output the 3D model is included in the bottom right. \\ \\ Along the left column are the options to customise the knot including adding breadlines and showing or hiding various elements of the knot. The Save and load buttons are included in the top left. Keyboard shortcuts are provided for these options (the shotcut is included in brackets) as well as native system shortcuts for save, load, undo, and redo.\\ \\ Adding breaklines opens the interface in figure~\ref{fig:interfaceBreaklines} allowing the user to produce breaklines by selecting dots of the same colour in a horizontal or vertical line, the system checks that the breaklines of the two subgrids (i.e. lines joining red and blue dots) do not cross. To remove all or a part of a breakline just select part (or all) of it in this interface. The interface for adding breaklines is shown in Figure~\ref{fig:interfaceBreaklines}.\\ \\ The knotwork is drawn using the algorithm described in Section~\ref{Algorithm}, and the colours are randomised each time an action is performed.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.3]{fig/interfaceBreaklines.png}
+    \caption{The interface for adding breaklines}
+    \label{fig:interfaceBreaklines}
+  \end{center}
+\end{figure}
+
+The program includes a save function that writes the knotwork and breaklines to the disk in JSON format. The user is given a save dialogue (provided by the Kivy library). The user is also able to load a previously saved knot from the disk. The knotwork can be saved with any file extension.
+
+%*********************************************************************************************************
+\subsubsection{Output 3D Interface}
+%*********************************************************************************************************
+The software provides an interface for outputting the knotwork as an STL file for 3D printing. The interface for producing the 3D knotwork (Figure~\ref{fig:interface3D}) shows two cross sections of the knot to illustrate how they will interact and the affect the various options have on their shape. The user can set the width, height and radius of the corners of the rounded rectangle allowing them to specify the cross section as either a rectangle, rounded rectangle or circle. They can indicate how much overlap the knot should have, which sets the height of the one band above the other at the overlap point. They can also specify the smoothness of the corners in the cross sections (the number of triangles the corner is divided into) and the smoothness of the 3D model (the number of cylinders each cell is divided into). The final 3D output is shown in figure~\ref{fig:3Doutput}
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.3]{fig/interface3D.png}
+    \caption{The interface for outputting a 3D model of the knotwork}
+    \label{fig:interface3D}
+  \end{center}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.3]{fig/3Doutput.png}
+    \caption{The 3D model of the knotwork}
+    \label{fig:3Doutput}
+  \end{center}
+\end{figure}
+
+
+%*********************************************************************************************************
+\section{Experiment and Results}
+%*********************************************************************************************************
+
+Four types of evaluation were carried out on the software. The first evaluation looks at knots produced using the software and knots from other sources, a visual examination was conducted to evaluate the program's strength at producing accurate celtic knotwork. The second evaluation is a Time evaluation to evaluate the speed and responsiveness of the program when generating the knots and the 3D output. The third evaluation is a heuristic evaluation using the Neilsen Heuristics evaluation techniques, which will evaluate the suitability of the interface. The fourth evaluation is completed by running the 3D output through netfabb and checking for errors
+
+%*********************************************************************************************************
+\subsection{Comparison with Other Knotwork}
+%*********************************************************************************************************
+
+
+
+Comparisons of a knot with the equivalent produced using the software are made in Figures~\ref{fig:fig1},~\ref{fig:fig2},~\ref{fig:fig3},~\ref{fig:fig4} and~\ref{fig:fig5}, in most cases it is possible to produce a structurally identical knot, but the lack of customised curves prevents it from being visually identical. Figures ~\ref{fig:fig1},~\ref{fig:fig2},~\ref{fig:fig3} and~\ref{fig:fig4} compares the knotwork to that produced using the basic grid algorithm and Figure~\ref{fig:fig5} shows a more complex design made by postprocessing the images using a graphics package.
+
+\begin{figure}[ht]
+\begin{subfigure}
+  \centering
+  \includegraphics[width=.8\linewidth]{fig/knots/01.png}
+  \caption{The knot produced using traditional methods \cite{knot1}}
+  \label{fig:sfig1.1}
+\end{subfigure}%
+\begin{subfigure}
+  \centering
+  \includegraphics[width=.8\linewidth]{fig/knots/01b.png}
+  \caption{The knot produced using the program from this report}
+  \label{fig:sfig1.2}
+\end{subfigure}
+\caption{Comparison of traditionally produced knot with one produced from the software. ~\ref{fig:sfig1.1} and ~\ref{fig:sfig1.2}}
+\label{fig:fig1}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{subfigure}
+  \centering
+  \includegraphics[width=.8\linewidth]{fig/knots/02.png}
+  \caption{The knot produced using traditional methods \footnotemark[1]\\}
+  \label{fig:sfig2.1}
+\end{subfigure}%
+\begin{subfigure}
+  \centering
+  \includegraphics[width=.8\linewidth]{fig/knots/02b.png}
+  \caption{The knot produced using the program from this report}
+  \label{fig:sfig2.2}
+\end{subfigure}
+\caption{Comparison of traditionally produced knot with one produced from the software. ~\ref{fig:sfig2.1} and ~\ref{fig:sfig2.2}}
+\label{fig:fig2}
+\end{figure}
+
+\footnotetext[1]{source: \url{http://www.ceolas.org/clipart.html}}
+
+\begin{figure}[ht]
+\begin{subfigure}
+  \centering
+  \includegraphics[width=.8\linewidth]{fig/knots/03.png}
+  \caption{The knot produced using traditional methods \footnotemark[3]}
+  \label{fig:sfig3.1}
+\end{subfigure}%
+\begin{subfigure}
+  \centering
+  \includegraphics[width=.8\linewidth]{fig/knots/03b.png}
+  \caption{The knot produced using the program from this report}
+  \label{fig:sfig3.2}
+\end{subfigure}
+\caption{Comparison of traditionally produced knot with one produced from the software. ~\ref{fig:sfig3.1} and ~\ref{fig:sfig3.2}}
+\label{fig:fig3}
+\end{figure}
+
+
+
+
+\begin{figure}[ht]
+\begin{subfigure}
+  \centering
+  \includegraphics[width=.8\linewidth]{fig/knots/04.jpg}
+  \caption{The knot produced using traditional methods \footnotemark[6]}
+  \label{fig:sfig4.1}
+\end{subfigure}%
+\begin{subfigure}
+  \centering
+  \includegraphics[width=.8\linewidth]{fig/knots/04b.png}
+  \caption{The knot produced using the program from this report}
+  \label{fig:sfig4.2}
+\end{subfigure}
+\caption{Comparison of traditionally produced knot with one produced from the software. ~\ref{fig:sfig4.1} and ~\ref{fig:sfig4.2}}
+\label{fig:fig4}
+\end{figure}
+
+
+
+\begin{figure}[ht]
+\begin{subfigure}
+  \centering
+  \includegraphics[width=.8\linewidth]{fig/knots/05.jpg}
+  \caption{The knotted cross produced using traditional methods \footnotemark[6]}
+  \label{fig:sfig5.1}
+\end{subfigure}%
+\begin{subfigure}
+  \centering
+  \includegraphics[width=.8\linewidth]{fig/knots/05b.png}
+  \caption{The knot produced using the program and photoshop from this report}
+  \label{fig:sfig5.2}
+\end{subfigure}
+\caption{Comparison of traditionally produced knot with one produced from elements produced in the software with post processing in photoshop - showing the potential for producing more complex designs by making them up of simple elements. ~\ref{fig:sfig5.1} and ~\ref{fig:sfig5.2}}
+\label{fig:fig5}
+\end{figure}
+
+
+
+
+
+%*********************************************************************************************************
+\subsection{Time Evaluation}
+%*********************************************************************************************************
+The knotwork program was tested in order to gauge the time the user would be required to wait when producing large and complex knots. The size of the knots was tested in particular, both when generating the knot and when generating the 3D Model of the knotwork. The time test was carried out on a MacBook Air, so more powerful computers could show lower times.\\
+The time taken to produce the Knot data structure was recorded over 100 trials and resulted in:
+\begin{enumerate}
+	\item \textbf{4x4 Knot:} $5.69 \times 10^{-4} \pm 1.3 \times 10^{-5}$ Seconds
+	\item \textbf{10x10 Knot:} $3.31 \times 10^{-3} \pm 7.2 \times 10^{-5}$ Seconds
+	\item \textbf{50x50 Knot:} $0.10 \pm 0.0015$ Seconds
+	\item \textbf{100x100 Knot:} $0.43 \pm 0,0035$ Seconds
+\end{enumerate}
+The data is reported with a 95\% confidence interval.\\ \\
+The time is acceptable as even a 100x100 knot is produced in less than 1 second
+\\ \\
+The time taken to generate the 3D model was recorded over 100 trials and resulted in
+\begin{enumerate}
+	\item \textbf{4x4 Knot:} $2.71 \pm 0.0060$ Seconds
+	\item \textbf{10x10 Knot:} $17.80 \pm 0.012$ Seconds
+	\item \textbf{50x50 Knot:} $1060.02 \pm 222.45$ Seconds\footnotemark[2]
+\end{enumerate}
+\footnotetext[2]{due to the long length of time taken to perform this test only 3 trials were run}
+The data is reported with a 95\% confidence interval.\\ \\
+The time taken to generate the 3D knot is substantial due to the large number of calculations, and for larger knots this can cause the program to hang until the  computation is complete, which can lead the user to pressing the "Output 3D" button multiple times (which leads to even longer calculations as the calculation is repeated on each click). A 50x50 Knot takes longer than 17 minutes to produce on average, which is a prohibitive amount of time, however most knotwork is small so users should not encounter this situation often.
+
+%*********************************************************************************************************
+\subsection{Heuristic Evaluation}
+%*********************************************************************************************************
+
+The Heuristic evaluation was completed by 3 people of which 2 had previous experience with Celtic Knots. They were asked to complete a series of tasks relating to the interface and rating their experience. Comments were also recorded. Those with previous experience found the system easier to use. \\ \\ \footnotetext[3]{source: \url{http://imgarcade.org/1/celtic-knot-border/}}
+The basic evaluation will be done using Nielsen's heuristics:
+\begin{enumerate}
+	\item \textbf{Visibility of system status:} When asked during the tasks whether the system gave appropriate feedback within a reasonable amount of time 95.24\% of people responded "Yes", the only case where the interface did not give appropriate feedback was during the saving of the 3D knot where the time taken to save the knot (approx 2 secconds) left the users thinking they had not clicked the button. When asked in general their agreement with the statement "The system kept me informed about status within a reasonable amount of time" the response had an average of $1.67 \pm 2.07$ (with a standard deviation of 0.58) (where 1 is strongly agree and 5 is strongly disagree). This shows that the system generally responds quickly to events, a time evaluation is included in the above section which shows the time taken to produce the knotwork.
+	\item \textbf{Match between system and the real world:} When asked how much they agreed with the statement "The system was easy to understand and the terms used were clear" the users gave it an average score of $1.67 \pm 2.07$ (with a standard deviation of 0.58) (with 1 being strongly agree and 5 being strongly disagree). The system uses plain English terms and pictographic representations as much as possible, but specific options require a small amount of knowledge of Celtic Knotwork (for example Breaklines).
+	\item \textbf{User control and freedom:} The system supports undo (ctrl+z) and redo (shift+ctrl+z), dialogues for save and load have cancel buttons and most actions are reversible through the use of undo. Changing the size of a knot erases breaklines and is not reversible but users are presented with a dialogue warning them of this fact. When asked how much they agree with the following statement "I was able to escape from any scenario or action with undo/redo cancel etc" users gave an average rating of $1.67 \pm 2.07$ (with a standard deviation of 0.58) (where 1 is strongly agree and 5 is strongly disagree)
+	\item \textbf{Consistency and standards:} When asked how much they agree with the statement "The system language and design was consistent with my expectations" user responded with an average rating of $1.33 \pm 2.07$ (with a standard deviation of 0.58) (where 1 is strongly agree and 5 is strongly disagree). Platform conventions for undo, redo, save and load shortcuts were maintained.
+	\item \textbf{Error prevention:} All inputs are carefully checked for validity and only one error was found by the users, which was saving the data to a restricted disk location.
+	\item \textbf{Recognition rather than recall:} The system does not require the user to remember anything between dialogues and all relevant information is displayed on the screen, when asked how much they agree with the statement "The system was easy to use and I did not have to remember anything between dialogues" the users gave it an average rating of $1.33 \pm 2.07$ (with a standard deviation of 0.58) (where 1 is Strongly Agree and 5 is Strongly Disagree)
+	\item \textbf{Flexibility and efficiency of use:} The system provides a set of keyboard shortcuts, which are listed in the app (e.g. (A)dd Breaklines uses the keyboard shortcut A) as well as system standard undo, redo, save and load shortcuts. Users made use of keyboard shortcuts 66.67\% of the time, and when asked how much they agree with the statements "Keyboard shortcuts were helpful" and "Keyboard shortcuts were easy to figure out" they gave average ratings of $2\pm 3.58$ (with a standard deviation of 1) and $1 \pm 0$ (with a standard deviation of 0) respectively (where 1 is Strongly Agree and 5 is Strongly Disagree)
+	\item \textbf{Aesthetic and minimalist design:} When asked how much they agree with the statements "The design was visually pleasing" and "All information presented was relevant" users gave a average responses of $1.33 \pm 2.07$ (with a standard deviation of 0.58) and $2.33 \pm 2.07$ (with a standard deviation of 0.58)  respectively (with 1 being strongly agree and 5 being strongly disagree). The interface uses the Kivy library and although it provides a non-native look and feel it is still visually pleasing.
+	\item \textbf{Help users recognise, diagnose, and recover from errors:} One error was encountered by the users, which involved saving the file to a location on the disk the user did not have access to (this error occurred because the standard Kivy save dialogue presents the user with the root of the hard drive as the main directory). Users were unable to recover from this error as it crashed the software. No other errors were discovered by the users.
+	\item \textbf{Help and documentation:}\footnotemark[4]\footnotetext[4]{the documentation is available at \url{https://github.com/mitchmyburgh/celtic-knotwork}} When asked whether they used the documentation for each task, users responded "Yes" 19.05\% of the time. Those that had previous experience with Celtic Knots did not use the documentation, while those who had no previous experience used the documentation in 57.14\% of the tasks.
+\end{enumerate}
+
+The users found the interface easy to use and quick to pick up, their ratings indicate that the interface designed for this project is user-friendly and meets the requirements of a successful interface.
+
+
+
+
+%*********************************************************************************************************
+\subsection{3D Evaluation}
+%*********************************************************************************************************
+
+The 3D produced knotwork does not show any errors in netfabb, so it can be concluded that it is suitable for 3D printing. Figures~\ref{fig:3Dknot1} and~\ref{fig:3Dknot2} show the 3D output in netfabb, these are recreations of Figures~\ref{fig:glassner3D} and~\ref{fig:KC3D} respectively.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.3]{fig/3Dknot1.png}
+    \caption{The 3D model of the knotwork showing the similarity to Figure~\ref{fig:glassner3D}}
+    \label{fig:3Dknot1}
+  \end{center}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.4]{fig/3Dknot2.png}
+    \caption{The 3D model of the knotwork showing the similarity to Figure~\ref{fig:KC3D}}
+    \label{fig:3Dknot2}
+  \end{center}
+\end{figure}
+
+%*********************************************************************************************************
+\section{Conclusion}
+%*********************************************************************************************************
+Celtic Knotwork, an ancient style of artwork, was relatively recently (in the 1950's) discovered to have algorithmic properties, which enable them to be produced using software. \\ \\This project aimed to produce a user-friendly interface for producing Celtic Knotwork and a quick and easy export of a 3D file for 3D printing. This report has been successful in producing this, with user evaluation showing the interface to be usable and visually pleasing, and a variety of 3D models being produced without errors. The software can recreate any knotwork produced using the grid-based algorithm, and with post-processing in a graphics package a variety of more complex designs can be achieved.
+
+%*********************************************************************************************************
+\section{Future Research}
+%*********************************************************************************************************
+
+Future research could be conducted to improve the implentation of the knotwork algorithm. The knot could be expanded to work with other types of grids (e.g. Triangular grids) or deforming and wrapping the knotwork around other shapes, such as circles or within text as is seen in Illuminated manuscripts (Figure~\ref{fig:CelticManu})
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale = 0.6]{fig/CelticManu.jpg}
+    \caption{A Knotwork pattern taken from an illuminated manuscript \footnotemark[5]}
+    \label{fig:CelticManu}
+  \end{center}
+\end{figure}
+\footnotetext[5]{source: \url{http://www.danseesestudios.com/blog/2013/3/17/my-favorite-lettering-artists-the-decorative-scribes-of-the.html}}
+
+The software could be improved by providing more granular control to the user (although this will have to be balanced with usability concerns) such as styling the knot with colours and custom designs. The user could also be given options to set each corner style individually. 
+
+%*********************************************************************************************************
+\section{Acknowledgements}
+%*********************************************************************************************************
+
+The author would like to thank those that participated in this study as well as Professor J. Gain for his input.
+
+
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+\bibliographystyle{alpha}
+\bibliography{sigproc}  % sigproc.bib is the name of the Bibliography in this case
+% You must have a proper ".bib" file
+%  and remember to run:
+% latex bibtex latex latex
+% to resolve all references
+%
+% ACM needs 'a single self-contained file'!
+%
+%APPENDICES are optional
+%\balancecolumns
+
+\footnotetext[6]{source: \url{http://www.countryneedle.net/images/\\ large/tcn\_celticknotwork2thumb.jpg}}
+\footnotetext[7]{source: \url{http://imgkid.com/celtic-shield-knot-designs.shtml}}
+
+\balancecolumns
+% That's all folks!
+\end{document}

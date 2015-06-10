@@ -1,0 +1,953 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.9)  10 JUN 2015 23:02
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"MYBMIT001 - Report CSC2005Z.tex"
+(./MYBMIT001 - Report CSC2005Z.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(./acm_proc_article-sp.cls
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count79
+))
+\Gin@req@height=\dimen102
+\Gin@req@width=\dimen103
+)
+\epsfxsize=\dimen104
+\epsfysize=\dimen105
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip41
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen106
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen107
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count80
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count81
+\leftroot@=\count82
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count83
+\DOTSCASE@=\count84
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen108
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count85
+\c@MaxMatrixCols=\count86
+\dotsspace@=\muskip10
+\c@parentequation=\count87
+\dspbrk@lvl=\count88
+\tag@help=\toks17
+\row@=\count89
+\column@=\count90
+\maxfields@=\count91
+\andhelp@=\toks18
+\eqnshift@=\dimen109
+\alignsep@=\dimen110
+\tagshift@=\dimen111
+\tagwidth@=\dimen112
+\totwidth@=\dimen113
+\lineht@=\dimen114
+\@envbody=\toks19
+\multlinegap=\skip42
+\multlinetaggap=\skip43
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+Document Class 'acm_proc_article-sp' <22nd. April '09>. Modified by G.K.M. Tobi
+n
+Based in part upon document Style `acmconf' <22 May 89>. Hacked 4/91 by
+shivers@cs.cmu.edu, 4/93 by theobald@cs.mcgill.ca
+Excerpts were taken from (Journal Style) 'esub2acm.cls'.
+****** Bugs/comments/suggestions to Gerry Murray -- murray@hq.acm.org ******
+\footheight=\dimen115
+\@maxsep=\dimen116
+\@dblmaxsep=\dimen117
+\aucount=\count92
+\originalaucount=\count93
+\auwidth=\dimen118
+\auskip=\dimen119
+\auskipcount=\count94
+\auskip=\dimen120
+\allauboxes=\dimen121
+\addauthors=\toks21
+\addauflag=\count95
+\subtitletext=\toks22
+\savesection=\count96
+\sectioncntr=\count97
+\c@figure=\count98
+\c@table=\count99
+\titleboxnotes=\toks23
+\titleboxnoteflag=\count100
+Document Class: acm_proc_article-sp 2009/04/22 - V3.2SP - based on esub2acm.sty
+ <23 April 96>
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+\@acmtitlebox=\box28
+\titlenotecount=\count101
+\tntoks=\toks24
+\tntokstwo=\toks25
+\tntoksthree=\toks26
+\tntoksfour=\toks27
+\tntoksfive=\toks28
+\catcount=\count102
+\copyrightnotice=\toks29
+\conf=\toks30
+\confinfo=\toks31
+\c@part=\count103
+\c@section=\count104
+\c@subsection=\count105
+\c@subsubsection=\count106
+\c@paragraph=\count107
+
+Using 'Abbrev' bibliography style
+LaTeX Info: Redefining \cite on input line 1236.
+\bibindent=\dimen122
+\colcntr=\count108
+\saveb@x=\box29
+\copyrtyr=\toks32
+\acmcopyr=\toks33
+\boilerplate=\toks34
+\copyrightetc=\toks35
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+)
+LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aer.fd
+File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
+)))
+(./MYBMIT001 - Report CSC2005Z.aux)
+\openout1 = `"MYBMIT001 - Report CSC2005Z.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count109
+\scratchdimen=\dimen123
+\scratchbox=\box30
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count112
+\MPscratchDim=\dimen124
+\MPnumerator=\count113
+\makeMPintoPDFobject=\count114
+\everyMPtoPDFconversion=\toks37
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Try loading font information for U+msa on input line 93.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 93.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 93.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+./MYBMIT001 - Report CSC2005Z.tex:97: Undefined control sequence.
+<argument> ...the full code is available at: \url 
+                                                  {https://github.com/mitchm...
+l.97 .../github.com/mitchmyburgh/celtic-knotwork}}
+                                                  
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+[][]\T1/aer/m/n/9 the full code is avail-able at:
+ []
+
+<basicKnot.png, id=1, 803.0pt x 479.7925pt>
+File: basicKnot.png Graphic file (type png)
+ <use basicKnot.png>
+Package pdftex.def Info: basicKnot.png used on input line 118.
+(pdftex.def)             Requested size: 160.59715pt x 95.95679pt.
+
+<fig/GlassnerProg.png, id=2, 742.775pt x 704.6325pt>
+File: fig/GlassnerProg.png Graphic file (type png)
+
+<use fig/GlassnerProg.png>
+Package pdftex.def Info: fig/GlassnerProg.png used on input line 131.
+(pdftex.def)             Requested size: 148.55237pt x 140.924pt.
+ [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./basicKnot.png> <./fig/GlassnerProg.png>]
+<fig/Glassner3D.png, id=15, 575.14874pt x 347.2975pt>
+File: fig/Glassner3D.png Graphic file (type png)
+ <use fig/Glassner3D.png>
+Package pdftex.def Info: fig/Glassner3D.png used on input line 141.
+(pdftex.def)             Requested size: 115.02771pt x 69.45827pt.
+
+<fig/KC3D.png, id=16, 446.66875pt x 446.66875pt>
+File: fig/KC3D.png Graphic file (type png)
+ <use fig/KC3D.png>
+Package pdftex.def Info: fig/KC3D.png used on input line 149.
+(pdftex.def)             Requested size: 89.33215pt x 89.33215pt.
+
+Overfull \hbox (3.27357pt too wide) in paragraph at lines 175--176
+\T1/aer/m/n/9 the knot-work al-go-rithm. A fo-cus on the in-ter-face should
+ []
+
+
+Overfull \hbox (70.8184pt too wide) in paragraph at lines 190--194
+\T1/aer/m/n/9 work was built based on the work of An-drew Glass-ner [Gla99a][Gl
+a99b][Gla00],
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--194
+
+ []
+
+[2 <./fig/Glassner3D.png> <./fig/KC3D.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
+
+ []
+
+<breaklines.png, id=21, 333.245pt x 248.93pt>
+File: breaklines.png Graphic file (type png)
+ <use breaklines.png>
+Package pdftex.def Info: breaklines.png used on input line 221.
+(pdftex.def)             Requested size: 199.94853pt x 149.35915pt.
+
+<gridPoints.png, id=22, 209.78375pt x 202.7575pt>
+File: gridPoints.png Graphic file (type png)
+ <use gridPoints.png>
+Package pdftex.def Info: gridPoints.png used on input line 234.
+(pdftex.def)             Requested size: 125.8712pt x 121.65543pt.
+
+<breaklines+lines.png, id=23, 348.30125pt x 270.00874pt>
+File: breaklines+lines.png Graphic file (type png)
+
+<use breaklines+lines.png>
+Package pdftex.def Info: breaklines+lines.png used on input line 244.
+(pdftex.def)             Requested size: 208.98236pt x 162.00648pt.
+
+<CelticKnotworkskel.png, id=24, 443.6575pt x 442.65375pt>
+File: CelticKnotworkskel.png Graphic file (type png)
+
+<use CelticKnotworkskel.png>
+Package pdftex.def Info: CelticKnotworkskel.png used on input line 254.
+(pdftex.def)             Requested size: 244.01237pt x 243.4603pt.
+
+Overfull \hbox (4.01237pt too wide) in paragraph at lines 254--255
+ [] 
+ []
+
+<rightCorners.png, id=25, 363.3575pt x 153.57375pt>
+File: rightCorners.png Graphic file (type png)
+ <use rightCorners.png>
+Package pdftex.def Info: rightCorners.png used on input line 269.
+(pdftex.def)             Requested size: 199.84723pt x 84.4658pt.
+
+<curveCorners.png, id=26, 365.365pt x 158.5925pt>
+File: curveCorners.png Graphic file (type png)
+ <use curveCorners.png>
+Package pdftex.def Info: curveCorners.png used on input line 277.
+(pdftex.def)             Requested size: 200.95137pt x 87.22612pt.
+
+[3 <./breaklines.png> <./gridPoints.png> <./breaklines+lines.png>]
+<fig/finalKnot.png, id=33, 408.52625pt x 412.54124pt>
+File: fig/finalKnot.png Graphic file (type png)
+ <use fig/finalKnot.png>
+Package pdftex.def Info: fig/finalKnot.png used on input line 287.
+(pdftex.def)             Requested size: 224.69012pt x 226.89838pt.
+
+<fig/interface.png, id=34, 800.9925pt x 622.325pt>
+File: fig/interface.png Graphic file (type png)
+ <use fig/interface.png>
+Package pdftex.def Info: fig/interface.png used on input line 301.
+(pdftex.def)             Requested size: 240.29959pt x 186.69893pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+
+ []
+
+<fig/interfaceBreaklines.png, id=35, 800.9925pt x 620.3175pt>
+File: fig/interfaceBreaklines.png Graphic file (type png)
+
+<use fig/interfaceBreaklines.png>
+Package pdftex.def Info: fig/interfaceBreaklines.png used on input line 315.
+(pdftex.def)             Requested size: 240.29959pt x 186.09668pt.
+
+Underfull \vbox (badness 1226) has occurred while \output is active []
+
+ [4 <./CelticKnotworkskel.png> <./rightCorners.png> <./curveCorners.png> <./fig
+/finalKnot.png>] <fig/interface3D.png, id=39, 799.98875pt x 619.31375pt>
+File: fig/interface3D.png Graphic file (type png)
+
+<use fig/interface3D.png>
+Package pdftex.def Info: fig/interface3D.png used on input line 329.
+(pdftex.def)             Requested size: 239.99847pt x 185.79555pt.
+ <fig/3Doutput.png, id=40, 543.02875pt x 534.99875pt>
+File: fig/3Doutput.png Graphic file (type png)
+
+<use fig/3Doutput.png>
+Package pdftex.def Info: fig/3Doutput.png used on input line 337.
+(pdftex.def)             Requested size: 162.90987pt x 160.50085pt.
+ [5 <./fig/interface.png> <./fig/interfaceBreaklines.png> <./fig/interface3D.pn
+g> <./fig/3Doutput.png>]
+
+./MYBMIT001 - Report CSC2005Z.tex:359: LaTeX Error: Environment subfigure undef
+ined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.359 \begin{subfigure}
+                       
+? 
+<fig/knots/01.png, id=44, 602.25pt x 394.47375pt>
+File: fig/knots/01.png Graphic file (type png)
+ <use fig/knots/01.png>
+Package pdftex.def Info: fig/knots/01.png used on input line 361.
+(pdftex.def)             Requested size: 192.00073pt x 125.75865pt.
+
+
+./MYBMIT001 - Report CSC2005Z.tex:364: LaTeX Error: \begin{figure} on input lin
+e 358 ended by \end{subfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.364 \end{subfigure}
+                     %
+? 
+
+./MYBMIT001 - Report CSC2005Z.tex:365: LaTeX Error: Environment subfigure undef
+ined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.365 \begin{subfigure}
+                       
+? 
+<fig/knots/01b.png, id=45, 420.57124pt x 214.8025pt>
+File: fig/knots/01b.png Graphic file (type png)
+ <use fig/knots/01b.png>
+Package pdftex.def Info: fig/knots/01b.png used on input line 367.
+(pdftex.def)             Requested size: 192.00073pt x 98.06305pt.
+
+
+./MYBMIT001 - Report CSC2005Z.tex:370: LaTeX Error: \begin{figure} on input lin
+e 358 ended by \end{subfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.370 \end{subfigure}
+                     
+? 
+
+./MYBMIT001 - Report CSC2005Z.tex:376: LaTeX Error: Environment subfigure undef
+ined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.376 \begin{subfigure}
+                       
+? 
+<fig/knots/02.png, id=46, 425.59pt x 182.6825pt>
+File: fig/knots/02.png Graphic file (type png)
+ <use fig/knots/02.png>
+Package pdftex.def Info: fig/knots/02.png used on input line 378.
+(pdftex.def)             Requested size: 192.00073pt x 82.41542pt.
+
+./MYBMIT001 - Report CSC2005Z.tex:379: Argument of \@caption has an extra }.
+<inserted text> 
+                \par 
+l.379 ...g traditional methods \footnotemark[1]\\}
+                                                  
+? 
+Runaway argument?
+\@captype {\write \@auxout {\string \@writefile {\csname ext@\@captype \ETC.
+./MYBMIT001 - Report CSC2005Z.tex:379: Paragraph ended before \@caption was com
+plete.
+<to be read again> 
+                   \par 
+l.379 ...g traditional methods \footnotemark[1]\\}
+                                                  
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
+
+ []
+
+
+./MYBMIT001 - Report CSC2005Z.tex:381: LaTeX Error: \begin{figure} on input lin
+e 375 ended by \end{subfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.381 \end{subfigure}
+                     %
+? 
+
+./MYBMIT001 - Report CSC2005Z.tex:382: LaTeX Error: Environment subfigure undef
+ined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.382 \begin{subfigure}
+                       
+? 
+<fig/knots/02b.png, id=47, 417.56pt x 171.64125pt>
+File: fig/knots/02b.png Graphic file (type png)
+ <use fig/knots/02b.png>
+Package pdftex.def Info: fig/knots/02b.png used on input line 384.
+(pdftex.def)             Requested size: 192.00073pt x 78.92448pt.
+
+
+./MYBMIT001 - Report CSC2005Z.tex:387: LaTeX Error: \begin{figure} on input lin
+e 375 ended by \end{subfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.387 \end{subfigure}
+                     
+? 
+./MYBMIT001 - Report CSC2005Z.tex:392: Undefined control sequence.
+<argument> ...tnotesep \ignorespaces source: \url 
+                                                  {http://www.ceolas.org/cli...
+l.392 ...\url{http://www.ceolas.org/clipart.html}}
+                                                  
+? 
+
+./MYBMIT001 - Report CSC2005Z.tex:395: LaTeX Error: Environment subfigure undef
+ined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.395 \begin{subfigure}
+                       
+? 
+<fig/knots/03.png, id=48, 952.55875pt x 425.59pt>
+File: fig/knots/03.png Graphic file (type png)
+ <use fig/knots/03.png>
+Package pdftex.def Info: fig/knots/03.png used on input line 397.
+(pdftex.def)             Requested size: 192.00073pt x 85.77887pt.
+
+./MYBMIT001 - Report CSC2005Z.tex:398: Argument of \@caption has an extra }.
+<inserted text> 
+                \par 
+l.398 ...ing traditional methods \footnotemark[3]}
+                                                  
+? 
+Runaway argument?
+./MYBMIT001 - Report CSC2005Z.tex:398: Paragraph ended before \@caption was com
+plete.
+<to be read again> 
+                   \par 
+l.398 ...ing traditional methods \footnotemark[3]}
+                                                  
+? 
+
+./MYBMIT001 - Report CSC2005Z.tex:400: LaTeX Error: \begin{figure} on input lin
+e 394 ended by \end{subfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.400 \end{subfigure}
+                     %
+? 
+
+./MYBMIT001 - Report CSC2005Z.tex:401: LaTeX Error: Environment subfigure undef
+ined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.401 \begin{subfigure}
+                       
+? 
+<fig/knots/03b.png, id=49, 417.56pt x 183.68625pt>
+File: fig/knots/03b.png Graphic file (type png)
+ <use fig/knots/03b.png>
+Package pdftex.def Info: fig/knots/03b.png used on input line 403.
+(pdftex.def)             Requested size: 192.00073pt x 84.46304pt.
+
+
+./MYBMIT001 - Report CSC2005Z.tex:406: LaTeX Error: \begin{figure} on input lin
+e 394 ended by \end{subfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.406 \end{subfigure}
+                     
+? 
+
+./MYBMIT001 - Report CSC2005Z.tex:415: LaTeX Error: Environment subfigure undef
+ined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.415 \begin{subfigure}
+                       
+? 
+<fig/knots/04.jpg, id=50, 72.635pt x 72.635pt>
+File: fig/knots/04.jpg Graphic file (type jpg)
+ <use fig/knots/04.jpg>
+Package pdftex.def Info: fig/knots/04.jpg used on input line 417.
+(pdftex.def)             Requested size: 192.00073pt x 192.02628pt.
+
+./MYBMIT001 - Report CSC2005Z.tex:418: Argument of \@caption has an extra }.
+<inserted text> 
+                \par 
+l.418 ...ing traditional methods \footnotemark[6]}
+                                                  
+? 
+Runaway argument?
+./MYBMIT001 - Report CSC2005Z.tex:418: Paragraph ended before \@caption was com
+plete.
+<to be read again> 
+                   \par 
+l.418 ...ing traditional methods \footnotemark[6]}
+                                                  
+? 
+
+./MYBMIT001 - Report CSC2005Z.tex:420: LaTeX Error: \begin{figure} on input lin
+e 414 ended by \end{subfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.420 \end{subfigure}
+                     %
+? 
+
+./MYBMIT001 - Report CSC2005Z.tex:421: LaTeX Error: Environment subfigure undef
+ined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.421 \begin{subfigure}
+                       
+? 
+<fig/knots/04b.png, id=51, 419.5675pt x 424.58624pt>
+File: fig/knots/04b.png Graphic file (type png)
+ <use fig/knots/04b.png>
+Package pdftex.def Info: fig/knots/04b.png used on input line 423.
+(pdftex.def)             Requested size: 192.00073pt x 194.29489pt.
+
+
+./MYBMIT001 - Report CSC2005Z.tex:426: LaTeX Error: \begin{figure} on input lin
+e 414 ended by \end{subfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.426 \end{subfigure}
+                     
+? 
+
+./MYBMIT001 - Report CSC2005Z.tex:434: LaTeX Error: Environment subfigure undef
+ined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.434 \begin{subfigure}
+                       
+? 
+<fig/knots/05.jpg, id=52, 1454.43375pt x 1892.06876pt>
+File: fig/knots/05.jpg Graphic file (type jpg)
+ <use fig/knots/05.jpg>
+Package pdftex.def Info: fig/knots/05.jpg used on input line 436.
+(pdftex.def)             Requested size: 192.00073pt x 249.75963pt.
+
+./MYBMIT001 - Report CSC2005Z.tex:437: Argument of \@caption has an extra }.
+<inserted text> 
+                \par 
+l.437 ...ing traditional methods \footnotemark[6]}
+                                                  
+? 
+Runaway argument?
+./MYBMIT001 - Report CSC2005Z.tex:437: Paragraph ended before \@caption was com
+plete.
+<to be read again> 
+                   \par 
+l.437 ...ing traditional methods \footnotemark[6]}
+                                                  
+? 
+
+./MYBMIT001 - Report CSC2005Z.tex:439: LaTeX Error: \begin{figure} on input lin
+e 433 ended by \end{subfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.439 \end{subfigure}
+                     %
+? 
+
+./MYBMIT001 - Report CSC2005Z.tex:440: LaTeX Error: Environment subfigure undef
+ined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.440 \begin{subfigure}
+                       
+? 
+<fig/knots/05b.png, id=53, 1454.43375pt x 1892.06876pt>
+File: fig/knots/05b.png Graphic file (type png)
+
+<use fig/knots/05b.png>
+Package pdftex.def Info: fig/knots/05b.png used on input line 442.
+(pdftex.def)             Requested size: 192.00073pt x 249.75963pt.
+
+
+./MYBMIT001 - Report CSC2005Z.tex:445: LaTeX Error: \begin{figure} on input lin
+e 433 ended by \end{subfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.445 \end{subfigure}
+                     
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 465--469
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 465--469
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--477
+
+ []
+
+./MYBMIT001 - Report CSC2005Z.tex:482: Undefined control sequence.
+<argument> ...tnotesep \ignorespaces source: \url 
+                                                  {http://imgarcade.org/1/ce...
+l.482 ...p://imgarcade.org/1/celtic-knot-border/}}
+                                                  
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 482--484
+
+ []
+
+[6 <./fig/knots/01.png> <./fig/knots/01b.png> <./fig/knots/02.png> <./fig/knots
+/02b.png>]
+Overfull \hbox (2.0697pt too wide) in paragraph at lines 486--487
+[]\T1/aer/bx/n/9 Match be-tween sys-tem and the real world: \T1/aer/m/n/9 When
+ []
+
+
+Overfull \hbox (1.21483pt too wide) in paragraph at lines 488--489
+[]\T1/aer/bx/n/9 Consistency and stan-dards: \T1/aer/m/n/9 When asked how much
+ []
+
+
+Overfull \hbox (3.39682pt too wide) in paragraph at lines 493--494
+[]\T1/aer/bx/n/9 Help users recog-nise, di-ag-nose, and re-cover from
+ []
+
+./MYBMIT001 - Report CSC2005Z.tex:494: Undefined control sequence.
+<argument> ... documentation is available at \url 
+                                                  {https://github.com/mitchm...
+l.494 ...github.com/mitchmyburgh/celtic-knotwork}}
+                                                   When asked whether they u...
+
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--494
+[][]\T1/aer/m/n/9 the doc-u-men-ta-tion is avail-able at
+ []
+
+[7 <./fig/knots/03.png> <./fig/knots/03b.png>]
+<fig/3Dknot1.png, id=66, 673.51625pt x 485.815pt>
+File: fig/3Dknot1.png Graphic file (type png)
+ <use fig/3Dknot1.png>
+Package pdftex.def Info: fig/3Dknot1.png used on input line 510.
+(pdftex.def)             Requested size: 202.05643pt x 145.74562pt.
+
+<fig/3Dknot2.png, id=67, 397.485pt x 388.45125pt>
+File: fig/3Dknot2.png Graphic file (type png)
+ <use fig/3Dknot2.png>
+Package pdftex.def Info: fig/3Dknot2.png used on input line 518.
+(pdftex.def)             Requested size: 158.99118pt x 155.37773pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 527--528
+
+ []
+
+<fig/CelticManu.jpg, id=68, 225.84375pt x 224.84pt>
+File: fig/CelticManu.jpg Graphic file (type jpg)
+ <use fig/CelticManu.jpg>
+Package pdftex.def Info: fig/CelticManu.jpg used on input line 537.
+(pdftex.def)             Requested size: 135.50728pt x 134.90503pt.
+
+./MYBMIT001 - Report CSC2005Z.tex:538: Argument of \@caption has an extra }.
+<inserted text> 
+                \par 
+l.538 ... illuminated manuscript \footnotemark[5]}
+                                                  
+? 
+Runaway argument?
+./MYBMIT001 - Report CSC2005Z.tex:538: Paragraph ended before \@caption was com
+plete.
+<to be read again> 
+                   \par 
+l.538 ... illuminated manuscript \footnotemark[5]}
+                                                  
+? 
+./MYBMIT001 - Report CSC2005Z.tex:542: Undefined control sequence.
+<argument> ...tnotesep \ignorespaces source: \url 
+                                                  {http://www.danseesestudio...
+l.542 ...ists-the-decorative-scribes-of-the.html}}
+                                                  
+? 
+
+Overfull \hbox (17.14769pt too wide) in paragraph at lines 542--542
+[][]\T1/aer/m/n/9 source: http://www.danseesestudios.com/blog/2013/3/17/my-
+ []
+
+(./MYBMIT001 - Report CSC2005Z.bbl
+./MYBMIT001 - Report CSC2005Z.bbl:26: Undefined control sequence.
+l.26   \url
+           {http://archive.bridgesmathart.org/2000/bridges2000-13.html}.
+? 
+
+Overfull \hbox (15.28917pt too wide) in paragraph at lines 20--27
+\T1/aer/m/n/9 http://archive.bridgesmathart.org/2000/bridges2000- 
+ []
+
+./MYBMIT001 - Report CSC2005Z.bbl:31: Undefined control sequence.
+l.31 \newblock \url
+                   {http://www.mi.sanu.ac.rs/vismath/fisher/}.
+? 
+)
+./MYBMIT001 - Report CSC2005Z.tex:569: Undefined control sequence.
+<argument> ...tnotesep \ignorespaces source: \url 
+                                                  {http://www.countryneedle....
+l.569 .../\\ large/tcn\_celticknotwork2thumb.jpg}}
+                                                  
+? 
+./MYBMIT001 - Report CSC2005Z.tex:570: Undefined control sequence.
+<argument> ...tnotesep \ignorespaces source: \url 
+                                                  {http://imgkid.com/celtic-...
+l.570 ...id.com/celtic-shield-knot-designs.shtml}}
+                                                  
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 570--570
+[][]\T1/aer/m/n/9 source: http://imgkid.com/celtic-shield-knot-
+ []
+
+[8] [9 <./fig/knots/04.jpg> <./fig/knots/04b.png> <./fig/knots/05.jpg> <./fig/k
+nots/05b.png>] [10
+
+ <./fig/3Dknot1.png> <./fig/3Dknot2.png> <./fig/CelticManu.jpg>] (./MYBMIT001 -
+ Report CSC2005Z.aux) ) 
+Here is how much of TeX's memory you used:
+ 2967 strings out of 493117
+ 38867 string characters out of 6135434
+ 103056 words of memory out of 5000000
+ 6328 multiletter control sequences out of 15000+600000
+ 51758 words of font info for 69 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,10n,28p,1864b,282s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base
+/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.
+pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "MYBMIT001 - Report CSC2005Z.pdf" (10 pages, 2197680 bytes).
+PDF statistics:
+ 120 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,57 @@
+\begin{thebibliography}{DKH00}
+
+\bibitem[Bai51]{GBain1951}
+George Bain.
+\newblock {\em Celtic Art: The Methods of Construction}.
+\newblock William MacLellan and Co., Glasgow, 1951.
+
+\bibitem[Bai86]{IBain1951}
+Iain Bain.
+\newblock {\em Celtic Knotwork}.
+\newblock Sterling Publishing, New York, 1986.
+
+\bibitem[DKH00]{DK2000}
+Frank Drewes and Renate Klempien-Hinrichs.
+\newblock {\em Theory and Application of Diagrams}, volume 1889 of {\em Lecture
+  Notes in Computer Science}, chapter Picking Knots from Trees, pages 89--104.
+\newblock Springer Berlin Heidelberg, 2000.
+
+\bibitem[Dun00]{bridges2000:13}
+Douglas Dunham.
+\newblock Hyperbolic celtic knot patterns.
+\newblock In Reza Sarhangi, editor, {\em Bridges: Mathematical Connections in
+  Art, Music, and Science}, pages 13--22, Southwestern College, Winfield,
+  Kansas, 2000. Bridges Conference.
+\newblock Available online at
+  \url{http://archive.bridgesmathart.org/2000/bridges2000-13.html}.
+
+\bibitem[FM]{knot1}
+G.~Fisher and B.~Mellor.
+\newblock On the topology of celtic knot designs.
+\newblock \url{http://www.mi.sanu.ac.rs/vismath/fisher/}.
+
+\bibitem[Gla99a]{Glassner1}
+Andrew Glassner.
+\newblock Andrew glassner's notebook: Celtic knotwork, part 1.
+\newblock {\em Computer Graphics and Applications, IEEE}, 19(5):78 -- 84,
+  Sept/Oct 1999.
+
+\bibitem[Gla99b]{Glassner2}
+Andrew Glassner.
+\newblock Andrew glassner's notebook: Celtic knotwork, part 2.
+\newblock {\em Computer Graphics and Applications, IEEE}, 19(6):82--86, Nov/Dec
+  1999.
+
+\bibitem[Gla00]{Glassner3}
+Andrew Glassner.
+\newblock Andrew glassner's notebook: Celtic knotwork, part 3.
+\newblock {\em Computer Graphics and Applications, IEEE}, 20(1):70--75, Jan/Feb
+  2000.
+
+\bibitem[KC03]{KC2003}
+Matthew Kaplan and Elaine Cohen.
+\newblock Computer generated celtic design.
+\newblock In Per Christensen and Daniel Cohen-Or, editors, {\em Eurographics
+  Symposium on Rendering 2003}, pages 9--19, 2003.
+
+\end{thebibliography}
